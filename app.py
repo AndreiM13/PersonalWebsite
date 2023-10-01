@@ -1,4 +1,4 @@
-from typing_extensions import Literal
+from typing import Union, Optional, Literal
 from PIL import Image
 import requests
 import streamlit as st
