@@ -1,17 +1,11 @@
 from PIL import Image
 import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Andrei Macovei", page_icon=":tada:", layout="wide")
 
 
-def load_lottiurl(url):
-    r = requests.get(url)
 
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 def local_css(file_name):
 
@@ -22,7 +16,6 @@ local_css("styles/style.css")
 
 # -----LOAD ASSETS----
 
-LOTTIE_URL = "https://lottie.host/827823ff-5ea9-4bc9-9cdd-eb7da9919c3f/g0cyw6CSGC.json"
 NLP_IMAGE_PATH = "images/nlp.PNG"
 DASH_IMAGE_PATH = "images/dash.PNG"
 TWITTER_IMAGE_PATH = "images/Capture.PNG"
@@ -56,7 +49,7 @@ with st.container():
             """
         )
     with right_column:
-        st_lottie(LOTTIE_URL, height=300, key="coding")
+        st.empty()
 
 
 
